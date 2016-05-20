@@ -1,0 +1,14 @@
+
+
+Make sure you can start your editor from the terminal by adding the following line to your .bash_profile 
+
+alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+
+
+
+
+git config --global core.editor "'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+
+(Instead of the first command, you may be able to use the simpler git config --global core.editor "subl -n -w" as shown in the video, but many students have found this does not work for them.)
