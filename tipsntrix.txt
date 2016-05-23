@@ -18,8 +18,17 @@ git merge master experimental	#MERGE BRANCHES; BESURE YOU'RE ON "master" BRANCH
 
 git branch -d experimental	#REMOVE/DELETE A BRANCH LABEL, BUT KEEPING ALL COMMITS ON THAT BRANCH
 
-git remote add origin https://github.com/syncacct411/git101.git
 
+#SYNTAX FOR CREATING A BRANCH ON A REMOTE(e.g., GitHub) LOCATION
+git remote add branch_name url_for_the_remote
+
+git remote add origin https://github.com/syncacct411/git101.git	#CREATING A REMOTE BRANCH CALLED "origin"
+
+git push to_remote_location branch_selection_is_from_local_master_branch
+git push origin master
+
+git pull from_remote_location branch_selection_is_from_remote_master_branch_on_github
+git pull origin master
 
 
 
