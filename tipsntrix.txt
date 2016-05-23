@@ -6,10 +6,9 @@ alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 
 
-git diff id1 id2	#COMPARING TWO COMMITS
-
-git diff 	#COMPARING WORKING-DIRECTORY AGAINST STAGING-AREA
-git diff --staged	#COMPARING THE STAGING AGAINST THE REPOSITORY 
+git diff commit1 commit2	#COMPARING TWO COMMITS
+git diff 			#COMPARING WORKING-DIRECTORY AGAINST STAGING-AREA
+git diff --staged		#COMPARING THE STAGING AGAINST THE REPOSITORY 
 
 
 
