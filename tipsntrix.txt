@@ -1,22 +1,30 @@
 
+git config --global core.editor "'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+
+
+# ...you may be able to use the simpler 
+git config --global core.editor "subl -n -w" 
+as shown in the video, but many students have found this does not work for them
 
 Make sure you can start your editor from the terminal by adding the following line to your .bash_profile 
-
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 
+###################### GIT COMMANDS ########################
 
-git diff commit1 commit2	#COMPARE TWO COMMITS
-git diff 			#COMPARE WORKING-DIRECTORY AGAINST STAGING-AREA
-git diff --staged		#COMPARE THE STAGING AGAINST THE REPOSITORY 
+git diff commit1 commit2	# COMPARE TWO COMMITS
+git diff 			# COMPARE WORKING-DIRECTORY AGAINST STAGING-AREA
+git diff --staged		# COMPARE THE STAGING AGAINST THE REPOSITORY 
 
-git log --graph --oneline master experimental 	#SHOW CHANGES BETWEEN "master" AND "experimental" ON ONE LINE
+git log --graph --oneline master experimental 	# SHOW CHANGES BETWEEN "master" AND "experimental" ON ONE LINE
 
-git show commit2	#SHOW CHANGES THAT WERE MADE/INTRODUCED COMPARED TO ITS PARENT
+git show commit2	# SHOW CHANGES THAT WERE MADE/INTRODUCED COMPARED TO ITS PARENT
 
-git merge master experimental	#MERGE BRANCHES; BESURE YOU'RE ON "master" BRANCH
+git merge master experimental	# MERGE BRANCHES; BESURE YOU'RE ON "master" BRANCH
 
-git branch -d experimental	#REMOVE/DELETE A BRANCH LABEL, BUT KEEPING ALL COMMITS ON THAT BRANCH
+git branch -d experimental	# REMOVE/DELETE A BRANCH LABEL, BUT KEEPING ALL COMMITS ON THAT BRANCH
 
 
 #SYNTAX FOR CREATING A BRANCH ON A REMOTE(e.g., GitHub) LOCATION
@@ -30,18 +38,16 @@ git push origin master
 git pull from_remote_location branch_selection_is_from_remote_master_branch_on_github
 git pull origin master
 
+#NOTE: 
+git pull origin master =	git fetch origin	# UPDATE THE LOCAL VERSION WITH THE REMOTE BRANCH CALLED "origin" LEAVING THE LOCAL VERSION ALONE
+							git merge master origin/master
+
+git clone 
 
 
 
 
 
-
-git config --global core.editor "'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w"
-git config --global push.default upstream
-git config --global merge.conflictstyle diff3
-
-
-(Instead of the first command, you may be able to use the simpler git config --global core.editor "subl -n -w" as shown in the video, but many students have found this does not work for them.)
 
 
 Force the .bash_profile to execute. This loads the values immediately without having to reboot. In your Terminal window, run the following command.
@@ -49,6 +55,19 @@ Force the .bash_profile to execute. This loads the values immediately without ha
 source ~/.bash_profile
 
 
-HEAD - CURRENT COMMIT
+HEAD	# CURRENT COMMIT
+
+
+
+###################### POWERSHELL ########################
+
+$PSVersionTable.PSVersion	# SHOW CURRENT VERSION
+
+
+
+
+
+
+
 
 
