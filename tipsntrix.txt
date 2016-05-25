@@ -67,6 +67,15 @@ $PSVersionTable.PSVersion					# SHOW CURRENT VERSION
 dir function:\createDirectoriesAndMov*		# SHOW FUNCTIONS CURRENTLY IN MEMORY
 
 
+#
+# import-module... 
+# help about_Profiles
+#
+# Learn Windows PowerShell in a Month of Lunches (https://www.youtube.com/watch?v=3UtJ10SrUJo&index=97&list=PL6D474E721138865A)
+#
+#
+#
+
 
 
 
