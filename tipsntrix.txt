@@ -59,10 +59,12 @@ HEAD	# CURRENT COMMIT
 
 
 
+
+
+
 ###################### POWERSHELL ########################
-
-$PSVersionTable.PSVersion	# SHOW CURRENT VERSION
-
+$PSVersionTable.PSVersion					# SHOW CURRENT VERSION
+dir function:\createDirectoriesAndMov*		# SHOW FUNCTIONS CURRENTLY IN MEMORY
 
 
 
