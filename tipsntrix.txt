@@ -73,6 +73,7 @@ dir function:\createDirectoriesAndMov*		# SHOW FUNCTIONS CURRENTLY IN MEMORY
 #
 # Learn Windows PowerShell in a Month of Lunches (https://www.youtube.com/watch?v=3UtJ10SrUJo&index=97&list=PL6D474E721138865A)
 #
+# Invoke-RestMethod blogs.msdn.com/b/powershell/rss.aspx | select title,pubdate
 #
 #
 
