@@ -42,9 +42,17 @@ git pull origin master
 git pull origin master =	git fetch origin	# UPDATE THE LOCAL VERSION WITH THE REMOTE BRANCH CALLED "origin" LEAVING THE LOCAL VERSION ALONE
 							git merge master origin/master
 
-git clone 
+git clone https://github.com/syncacct411/git101.git
 
+git revert c0329130a64b6fab9c351b1ad047012fc7326bba
 
+git reset --mixed c03291	# THIS IS THE DEFAULT (e.g., git reset c03291)
+git reset --soft c03291		
+git reset --hard c03291		# ***DANGEROUS*** 
+
+#CHECK OUT THESE AS WELL###
+git reset --soft HEAD~3
+git reset --hard HEAD~2
 
 
 
