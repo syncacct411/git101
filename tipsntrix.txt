@@ -1,18 +1,25 @@
+git merge tool?
+
+
 
 git config --global core.editor "'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w"
 git config --global push.default upstream
 git config --global merge.conflictstyle diff3
 
 
-# ...you may be able to use the simpler 
+# ADD A COOL TEXT EDITOR (e.g., sublime)
 git config --global core.editor "subl -n -w" 
-as shown in the video, but many students have found this does not work for them
+as shown in the video, but many students have found this does not work for them...
 
 Make sure you can start your editor from the terminal by adding the following line to your .bash_profile 
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 
+
+
 ###################### GIT COMMANDS ########################
+
+git commit -a -m "messages"	# "-a" AUTOMATICALLY STAGE
 
 git diff commit1 commit2	# COMPARE TWO COMMITS
 git diff 			# COMPARE WORKING-DIRECTORY AGAINST STAGING-AREA
@@ -22,45 +29,46 @@ git log --graph --oneline master experimental 	# SHOW CHANGES BETWEEN "master" A
 
 git show commit2	# SHOW CHANGES THAT WERE MADE/INTRODUCED COMPARED TO ITS PARENT
 
-git merge master experimental	# MERGE BRANCHES; BESURE YOU'RE ON "master" BRANCH
+git merge master experimental	# MERGE BRANCHES; 
+	or...
+git merge experimental		# BESURE YOU'RE ALREADY ON THE DESTINATION BRANCH (e.g., "master"); THEN ENTER THE NAME OF THE SOURCE BRANCH (e.g., "experimental")
 
 git branch -d experimental	# REMOVE/DELETE A BRANCH LABEL, BUT KEEPING ALL COMMITS ON THAT BRANCH
 
 
-#SYNTAX FOR CREATING A BRANCH ON A REMOTE(e.g., GitHub) LOCATION
-git remote add branch_name url_for_the_remote
 
-git remote add origin https://github.com/syncacct411/git101.git	#CREATING A REMOTE BRANCH CALLED "origin"
 
-git push to_remote_location branch_selection_is_from_local_master_branch
+
+
+git fetch origin	# UPDATE THE LOCAL VERSION WITH THE REMOTE BRANCH CALLED "origin", BUT WILL NOT MERGE, LEAVING THE LOCAL VERSION ALONE
+git merge master origin/master	# 
+
+git pull origin = git fetch origin + git merge master origin/master
+
+git pull from_remote_location local_branch_selection
+git pull origin master	# FETCH AND MERGE THE CHANGES FROM THE REMOTE BRANCH (i.e., "orgin") INTO YOUR CURRENT BRANCH (i.e., "master")
+
+git push to_remote_location branch_selection_is_from_local_master_branch	# PUSH LOCAL CHANGES TO THE REMOTE REPOSITORY CALLED "origin" AND COMMIT THEM TO THE "master" BRANCH
 git push origin master
 
-git pull from_remote_location branch_selection_is_from_remote_master_branch_on_github
-git pull origin master
+#SYNTAX FOR ADDING ADDITIONAL REPOSITORIES (CREATING A BRANCH ON A REMOTE(e.g., GitHub) LOCATION)
+git remote add repo_alias url
+git remote add origin https://github.com/syncacct411/git101.git	#CREATING AN ALIAS CALLED "origin" TO POINT TO THE URL
+git remote add MyRepo https://github.com/syncacct411/git101.git	#CREATING AN ALIAS CALLED "MyRepo" TO POINT TO THE URL
 
-#NOTE: 
-git pull origin master =	git fetch origin	# UPDATE THE LOCAL VERSION WITH THE REMOTE BRANCH CALLED "origin" LEAVING THE LOCAL VERSION ALONE
-							git merge master origin/master
+git remote -v	# SHOW REMOTE ALIAS (e.g., "origin", WHICH IS THE REPO THAT WAS CLONED) AND URL ENTRIES (e.g., "fetch", "push")
 
-git clone https://github.com/syncacct411/git101.git
-
-git revert c0329130a64b6fab9c351b1ad047012fc7326bba
-
-git reset --mixed c03291	# THIS IS THE DEFAULT (e.g., git reset c03291)
-git reset --soft c03291		
-git reset --hard c03291		# ***DANGEROUS*** 
-
-#CHECK OUT THESE AS WELL###
-git reset --soft HEAD~3
-git reset --hard HEAD~2
+git clone url	# DOWNLOAD A REPOSITORY AND ITS ENTIRE VERSION HISTORY
 
 
 
+# OVERWRITES YOUR LAST COMMIT AND/OR COMMIT'S MESSAGE WITH A NEW ONE USING THE --amend FLAG (https://www.git-tower.com/learn/git/faq/edit-fix-commit-message)
+git commit --amend -m "New and correct message"	# USING THE --amend FLAG 
 
 
-Force the .bash_profile to execute. This loads the values immediately without having to reboot. In your Terminal window, run the following command.
 
-source ~/.bash_profile
+source ~/.bash_profile	# FORCE THE ".bash_profile" TO RUN IMMEDIATELY WITHOUT REBOOTING
+
 
 
 HEAD	# CURRENT COMMIT
@@ -70,7 +78,10 @@ HEAD	# CURRENT COMMIT
 
 
 
-###################### POWERSHELL ########################
+
+
+
+###################### POWERSHELL STUFF ########################
 $PSVersionTable.PSVersion					# SHOW CURRENT VERSION
 dir function:\createDirectoriesAndMov*		# SHOW FUNCTIONS CURRENTLY IN MEMORY
 
@@ -84,6 +95,8 @@ dir function:\createDirectoriesAndMov*		# SHOW FUNCTIONS CURRENTLY IN MEMORY
 # Invoke-RestMethod blogs.msdn.com/b/powershell/rss.aspx | select title,pubdate
 #
 #
+
+
 
 
 
