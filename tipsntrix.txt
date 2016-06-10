@@ -58,6 +58,10 @@ git remote add MyRepo https://github.com/syncacct411/git101.git	#CREATING AN ALI
 
 git remote add origin https://github.com/syncacct411/git101.git	#CREATING AN ALIAS CALLED "origin" TO POINT TO THE URL
 git push -u origin master
+git push origin
+git push https://github.com/syncacct411/git101.git	# EXAMPLE
+
+
 
 git remote -v	# SHOW REMOTE ALIAS (e.g., "origin", WHICH IS THE REPO THAT WAS CLONED) AND URL ENTRIES (e.g., "fetch", "push")
 
