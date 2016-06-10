@@ -52,9 +52,12 @@ git push to_remote_location branch_selection_is_from_local_master_branch	# PUSH 
 git push origin master
 
 #SYNTAX FOR ADDING ADDITIONAL REPOSITORIES (CREATING A BRANCH ON A REMOTE(e.g., GitHub) LOCATION)
+
 git remote add repo_alias url
-git remote add origin https://github.com/syncacct411/git101.git	#CREATING AN ALIAS CALLED "origin" TO POINT TO THE URL
 git remote add MyRepo https://github.com/syncacct411/git101.git	#CREATING AN ALIAS CALLED "MyRepo" TO POINT TO THE URL
+
+git remote add origin https://github.com/syncacct411/git101.git	#CREATING AN ALIAS CALLED "origin" TO POINT TO THE URL
+git push -u origin master
 
 git remote -v	# SHOW REMOTE ALIAS (e.g., "origin", WHICH IS THE REPO THAT WAS CLONED) AND URL ENTRIES (e.g., "fetch", "push")
 
