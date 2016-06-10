@@ -81,6 +81,26 @@ HEAD	# CURRENT COMMIT
 
 
 
+git clone https://github.com/syncacct411/git101.git
+
+git revert c0329130a64b6fab9c351b1ad047012fc7326bba
+
+git reset --mixed c03291        # THIS IS THE DEFAULT (e.g., git reset c03291)
+git reset --soft c03291
+git reset --hard c03291         # ***DANGEROUS***
+
+#CHECK OUT THESE AS WELL###
+git reset --soft HEAD~3
+git reset --hard HEAD~2
+
+
+
+
+
+
+
+
+
 
 
 
